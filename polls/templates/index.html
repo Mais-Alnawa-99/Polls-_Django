@@ -1,0 +1,7 @@
+{% load static %}
+<link rel="stylesheet"  href="{%  static 'css/style.css' %}">
+{% for question  in question_list %}
+
+<p> <li><a href="{% url 'detail' question.id  %}" >{{question.question_text}}</a></li></p>
+
+ {% endfor %}
